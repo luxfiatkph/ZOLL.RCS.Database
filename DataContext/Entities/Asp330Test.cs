@@ -5,6 +5,10 @@
 
 namespace ZOLL.RCS.Database.DataContext.Entities
 {
+    /// <summary>
+    /// This class represents a record in the ASP_330_TEST table
+    /// This class includes a number of embedded classes representing related tables
+    /// </summary>
     public sealed class Asp330Test : IEquatable<Asp330Test>
     {
         public Guid Asp330TestId { get; set; }
@@ -103,6 +107,42 @@ namespace ZOLL.RCS.Database.DataContext.Entities
             }
         }
 
+        private Asp330TestLcdVisualInspection _asp330TestLcdVisualInspection;
+        public Asp330TestLcdVisualInspection Asp330TestLcdVisualInspection
+        {
+            get => _asp330TestLcdVisualInspection;
+            set
+            {
+                _asp330TestLcdVisualInspection = value;
+                if (value == null) return;
+                _asp330TestLcdVisualInspection.Asp330Test = this;
+            }
+        }
+
+        private Asp330TestLedCheck _asp330TestLedCheck;
+        public Asp330TestLedCheck Asp330TestLedCheck
+        {
+            get => _asp330TestLedCheck;
+            set
+            {
+                _asp330TestLedCheck = value;
+                if (value == null) return;
+                _asp330TestLedCheck.Asp330Test = this;
+            }
+        }
+
+        private Asp330TestLiIonBatteryCheck _asp330TestLiIonBatteryCheck;
+        public Asp330TestLiIonBatteryCheck Asp330TestLiIonBatteryCheck
+        {
+            get => _asp330TestLiIonBatteryCheck;
+            set
+            {
+                _asp330TestLiIonBatteryCheck = value;
+                if (value == null) return;
+                _asp330TestLiIonBatteryCheck.Asp330Test = this;
+            }
+        }
+
         private Asp330TestTotalPowerFailureAlarm _asp330TestTotalPowerFailureAlarm;
         public Asp330TestTotalPowerFailureAlarm Asp330TestTotalPowerFailureAlarm
         {
@@ -137,6 +177,9 @@ namespace ZOLL.RCS.Database.DataContext.Entities
             Asp330TestConditionalPmDueReset = new Asp330TestConditionalPmDueReset(that.Asp330TestConditionalPmDueReset) { Asp330Test = this };
             Asp330TestDatetimeCheck = new Asp330TestDatetimeCheck(that.Asp330TestDatetimeCheck) { Asp330Test = this };
             Asp330TestLcdContrastSet = new Asp330TestLcdContrastSet(that.Asp330TestLcdContrastSet) { Asp330Test = this };
+            Asp330TestLcdVisualInspection = new Asp330TestLcdVisualInspection(that.Asp330TestLcdVisualInspection) { Asp330Test = this };
+            Asp330TestLedCheck = new Asp330TestLedCheck(that.Asp330TestLedCheck) { Asp330Test = this };
+            Asp330TestLiIonBatteryCheck = new Asp330TestLiIonBatteryCheck(that.Asp330TestLiIonBatteryCheck) { Asp330Test = this };
             Asp330TestTotalPowerFailureAlarm = new Asp330TestTotalPowerFailureAlarm(that.Asp330TestTotalPowerFailureAlarm) { Asp330Test = this };
         }
 
@@ -162,6 +205,9 @@ namespace ZOLL.RCS.Database.DataContext.Entities
             if (!Asp330TestConditionalPmDueReset.Equals(that.Asp330TestConditionalPmDueReset)) return false;
             if (!Asp330TestDatetimeCheck.Equals(that.Asp330TestDatetimeCheck)) return false;
             if (!Asp330TestLcdContrastSet.Equals(that.Asp330TestLcdContrastSet)) return false;
+            if (!Asp330TestLcdVisualInspection.Equals(that.Asp330TestLcdVisualInspection)) return false;
+            if (!Asp330TestLedCheck.Equals(that._asp330TestLedCheck)) return false;
+            if (!Asp330TestLiIonBatteryCheck.Equals(that.Asp330TestLiIonBatteryCheck)) return false;
             if (!Asp330TestTotalPowerFailureAlarm.Equals(that.Asp330TestTotalPowerFailureAlarm)) return false;
             return true;
         }

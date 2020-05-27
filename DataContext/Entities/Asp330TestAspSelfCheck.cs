@@ -5,7 +5,11 @@
 
 namespace ZOLL.RCS.Database.DataContext.Entities
 {
-    public sealed class Asp330TestAspSelfCheck : IEquatable<Asp330TestAspSelfCheck>
+    /// <summary>
+    /// This class represents a record in the ASP_330_TEST_ASP_SELF_CHECK table
+    /// This class may be accessed through its own Repository or as an element of the <see cref="Asp330Test"/> class
+    /// </summary>
+    public class Asp330TestAspSelfCheck : IEquatable<Asp330TestAspSelfCheck>
     {
         public Guid Asp330TestId { get; set; }
         public bool? ResultCheckBox { get; set; }

@@ -70,6 +70,9 @@
     <Compile Include="Entities\Asp330TestDatetimeCheck.cs" />
     <Compile Include="Entities\Asp330TestTotalPowerFailureAlarm.cs" />
     <Compile Include="Entities\Asp330TestLcdContrastSet.cs" />
+    <Compile Include="Entities\Asp330TestLcdVisualInspection.cs" />
+    <Compile Include="Entities\Asp330TestLedCheck.cs" />
+    <Compile Include="Entities\Asp330TestLiIonBatteryCheck.cs" />
     <Compile Include="EntityConfigurations\Asp330CertLimitConfiguration.cs" />
     <Compile Include="EntityConfigurations\Asp330CustomerCertConfiguration.cs" />
     <Compile Include="EntityConfigurations\Asp330DeviceConfiguration.cs" />
@@ -84,7 +87,10 @@
     <Compile Include="EntityConfigurations\Asp330TestConfiguration.cs" />
     <Compile Include="EntityConfigurations\Asp330TestDatetimeCheckConfiguration.cs" />
     <Compile Include="EntityConfigurations\Asp330TestLcdContrastSetConfiguration.cs" />
+    <Compile Include="EntityConfigurations\Asp330TestLedCheckConfiguration.cs" />
+    <Compile Include="EntityConfigurations\Asp330TestLiIonBatteryCheckConfiguration.cs" />
     <Compile Include="EntityConfigurations\Asp330TestTotalPowerFailureAlarmConfiguration.cs" />
+    <Compile Include="EntityConfigurations\Asp330TestLcdVisualInspectionConfiguration.cs" />
     <Compile Include="Repositories\Asp330TestAspSelfCheckRepository.cs" />
     <Compile Include="Repositories\Asp330TestButtonCheckRepository.cs" />
     <Compile Include="Repositories\Asp330TestBuzzerCheckRepository.cs" />
@@ -92,6 +98,9 @@
     <Compile Include="Repositories\Asp330TestConditionalPmDueResetRepository.cs" />
     <Compile Include="Repositories\Asp330TestDatetimeCheckRepository.cs" />
     <Compile Include="Repositories\Asp330TestLcdContrastSetRepository.cs" />
+    <Compile Include="Repositories\Asp330TestLcdVisualInspectionRepository.cs" />
+    <Compile Include="Repositories\Asp330TestLedCheckRepository.cs" />
+    <Compile Include="Repositories\Asp330TestLiIonBatteryCheckRepository.cs" />
     <Compile Include="Repositories\Asp330TestRepository.cs" />
     <Compile Include="Repositories\Asp330TestTotalPowerFailureAlarmRepository.cs" />
     <Compile Include="RepositoryInterfaces\IAsp330SequenceTestRepository.cs" />
@@ -116,6 +125,9 @@
     <Compile Include="RepositoryInterfaces\IAsp330TestConditionalPmDueResetRepository.cs" />
     <Compile Include="RepositoryInterfaces\IAsp330TestDatetimeCheckRepository.cs" />
     <Compile Include="RepositoryInterfaces\IAsp330TestLcdContrastSetRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IAsp330TestLcdVisualInspectionRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IAsp330TestLedCheckRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IAsp330TestLiIonBatteryCheckRepository.cs" />
     <Compile Include="RepositoryInterfaces\IAsp330TestRepository.cs" />
     <Compile Include="RepositoryInterfaces\IAsp330TestTotalPowerFailureAlarmRepository.cs" />
     <Compile Include="RepositoryInterfaces\IRepository.cs" />

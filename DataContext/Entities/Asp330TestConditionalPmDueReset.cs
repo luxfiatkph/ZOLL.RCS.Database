@@ -5,6 +5,10 @@
 
 namespace ZOLL.RCS.Database.DataContext.Entities
 {
+    /// <summary>
+    /// This class represents a record in the ASP_330_TEST_CONDITIONAL_PM_DUE_RESET table
+    /// This class may be accessed through its own Repository or as an element of the <see cref="Asp330Test"/> class
+    /// </summary>
     public class Asp330TestConditionalPmDueReset : IEquatable<Asp330TestConditionalPmDueReset>
     {
         public Guid Asp330TestId { get; set; }

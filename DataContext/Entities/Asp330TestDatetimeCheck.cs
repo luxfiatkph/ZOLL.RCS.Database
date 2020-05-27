@@ -5,6 +5,10 @@
 
 namespace ZOLL.RCS.Database.DataContext.Entities
 {
+    /// <summary>
+    /// This class represents a record in the ASP_330_TEST_DATETIME_CHECK table
+    /// This class may be accessed through its own Repository or as an element of the <see cref="Asp330Test"/> class
+    /// </summary>
     public class Asp330TestDatetimeCheck : IEquatable<Asp330TestDatetimeCheck>
     {
         public Guid Asp330TestId { get; set; }

@@ -17,12 +17,11 @@ namespace ZOLL.RCS.Database.DataUnitTests
             Target.Asp330TestAspSelfCheck.Asp330Test = Target;
             Target.Asp330TestButtonCheck = FakerAsp330.Asp330TestButtonCheckFaker(ids)[0];
             Target.Asp330TestButtonCheck.Asp330Test = Target;
-
             Target.Asp330TestBuzzerCheck = FakerAsp330.Asp330TestBuzzerCheckFaker(ids)[0];
             Target.Asp330TestBuzzerCheck.Asp330Test = Target;
+
             Target.Asp330TestCommRamBootload = FakerAsp330.Asp330TestCommRamBootloadFaker(ids)[0];
             Target.Asp330TestCommRamBootload.Asp330Test = Target;
-
             Target.Asp330TestConditionalPmDueReset = FakerAsp330.Asp330TestConditionalPmDueResetFaker(ids)[0];
             Target.Asp330TestConditionalPmDueReset.Asp330Test = Target;
             Target.Asp330TestDatetimeCheck = FakerAsp330.Asp330TestDatetimeCheckFaker(ids)[0];
@@ -30,6 +29,13 @@ namespace ZOLL.RCS.Database.DataUnitTests
 
             Target.Asp330TestLcdContrastSet = FakerAsp330.Asp330TestLcdContrastSetFaker(ids)[0];
             Target.Asp330TestLcdContrastSet.Asp330Test = Target;
+            Target.Asp330TestLcdVisualInspection = FakerAsp330.Asp330TestLcdVisualInspectionFaker(ids)[0];
+            Target.Asp330TestLcdVisualInspection.Asp330Test = Target;
+            Target.Asp330TestLedCheck = FakerAsp330.Asp330TestLedCheckFaker(ids)[0];
+            Target.Asp330TestLedCheck.Asp330Test = Target;
+
+            Target.Asp330TestLiIonBatteryCheck = FakerAsp330.Asp330TestLiIonBatteryCheckFaker(ids)[0];
+            Target.Asp330TestLiIonBatteryCheck.Asp330Test = Target;
             Target.Asp330TestTotalPowerFailureAlarm = FakerAsp330.Asp330TestTotalPowerFailureAlarmFaker(ids)[0];
             Target.Asp330TestTotalPowerFailureAlarm.Asp330Test = Target;
         }
@@ -352,6 +358,51 @@ namespace ZOLL.RCS.Database.DataUnitTests
             var target = new Asp330Test(Target);
             var entity = new Asp330Test(Target);
             target.Asp330TestLcdContrastSet.ResultCheckBox = UnitTestHelper.Tweak(target.Asp330TestLcdContrastSet.ResultCheckBox);
+
+            // Act
+            var actual = entity.Equals(target);
+
+            // Assert
+            Assert.IsFalse(actual);
+        }
+
+        [TestMethod]
+        public void EqualsEntity_Asp330TestLcdVisualInspection_NE()
+        {
+            // Arrange
+            var target = new Asp330Test(Target);
+            var entity = new Asp330Test(Target);
+            target.Asp330TestLcdVisualInspection.ResultCheckBox = UnitTestHelper.Tweak(target.Asp330TestLcdVisualInspection.ResultCheckBox);
+
+            // Act
+            var actual = entity.Equals(target);
+
+            // Assert
+            Assert.IsFalse(actual);
+        }
+
+        [TestMethod]
+        public void EqualsEntity_Asp330TestLedCheck_NE()
+        {
+            // Arrange
+            var target = new Asp330Test(Target);
+            var entity = new Asp330Test(Target);
+            target.Asp330TestLedCheck.ResultCheckBox = UnitTestHelper.Tweak(target.Asp330TestLedCheck.ResultCheckBox);
+
+            // Act
+            var actual = entity.Equals(target);
+
+            // Assert
+            Assert.IsFalse(actual);
+        }
+
+        [TestMethod]
+        public void EqualsEntity_Asp330TestLiIonBatteryCheck_NE()
+        {
+            // Arrange
+            var target = new Asp330Test(Target);
+            var entity = new Asp330Test(Target);
+            target.Asp330TestLiIonBatteryCheck.ResultCheckBox = UnitTestHelper.Tweak(target.Asp330TestLiIonBatteryCheck.ResultCheckBox);
 
             // Act
             var actual = entity.Equals(target);

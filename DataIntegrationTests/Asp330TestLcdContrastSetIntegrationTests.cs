@@ -20,7 +20,6 @@ namespace ZOLL.RCS.Database.DataIntegrationTests
             SubEntities = FakerAsp330.Asp330TestLcdContrastSetFaker(ids);
         }
 
-
         [TestMethod]
         public void CrudTest()
         {

@@ -19,6 +19,9 @@ namespace ZOLL.RCS.Database.DataContext
         IAsp330TestConditionalPmDueResetRepository Asp330TestConditionalPmDueResets { get; }
         IAsp330TestDatetimeCheckRepository Asp330TestDatetimeChecks { get; }
         IAsp330TestLcdContrastSetRepository Asp330TestLcdContrastSets { get; }
+        IAsp330TestLcdVisualInspectionRepository Asp330TestLcdVisualInspections { get; }
+        IAsp330TestLedCheckRepository Asp330TestLedChecks { get; }
+        IAsp330TestLiIonBatteryCheckRepository Asp330TestLiIonBatteryChecks { get; }
         IAsp330TestTotalPowerFailureAlarmRepository Asp330TestTotalPowerFailureAlarms { get; }
         int SaveChanges();
     }

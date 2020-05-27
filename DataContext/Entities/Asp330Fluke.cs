@@ -5,6 +5,9 @@
 
 namespace ZOLL.RCS.Database.DataContext.Entities
 {
+    /// <summary>
+    /// This class represents a record in the ASP_330_FLUKE table
+    /// </summary>
     public class Asp330Fluke : IEquatable<Asp330Fluke>
     {
         public Guid Asp330TestId { get; set; }

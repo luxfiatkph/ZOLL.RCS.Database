@@ -3,6 +3,10 @@ using ZOLL.RCS.Database.DataContext.Entities;
 
 namespace ZOLL.RCS.Database.DataContext.EntityConfigurations
 {
+    /// <summary>
+    /// This is the fluent configuration file for the <see cref="Asp330Test"/> entity class
+    /// Configuration files are used by Entity Framework to build queries
+    /// </summary>
     public class Asp330TestConfiguration : EntityTypeConfiguration<Asp330Test>
     {
         public Asp330TestConfiguration()
@@ -30,7 +34,16 @@ namespace ZOLL.RCS.Database.DataContext.EntityConfigurations
             HasOptional(x => x.Asp330TestLcdContrastSet)
                 .WithRequired(x => x.Asp330Test)
                 .WillCascadeOnDelete();
+            HasOptional(x => x.Asp330TestLcdVisualInspection)
+                .WithRequired(x => x.Asp330Test)
+                .WillCascadeOnDelete();
+            HasOptional(x => x.Asp330TestLedCheck)
+                .WithRequired(x => x.Asp330Test)
+                .WillCascadeOnDelete();
             HasOptional(x => x.Asp330TestTotalPowerFailureAlarm)
+                .WithRequired(x => x.Asp330Test)
+                .WillCascadeOnDelete();
+            HasOptional(x => x.Asp330TestLiIonBatteryCheck)
                 .WithRequired(x => x.Asp330Test)
                 .WillCascadeOnDelete();
 

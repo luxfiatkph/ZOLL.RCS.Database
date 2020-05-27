@@ -7,6 +7,11 @@ using ZOLL.RCS.Database.DataContext.RepositoryInterfaces;
 
 namespace ZOLL.RCS.Database.DataContext.Repositories
 {
+    /// <summary>
+    /// This is the generic base class for Repositories associated with tables that have a single-field key
+    /// </summary>
+    /// <typeparam name="TEntity">The type of the entity representing the table rows</typeparam>
+    /// <typeparam name="TKey">The type of the field acting as the table's primary key</typeparam>
     public class Repository<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : class
     {
         protected TceContext Context { get; }

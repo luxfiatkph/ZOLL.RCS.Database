@@ -238,6 +238,63 @@ namespace ZOLL.RCS.Database.DataUnitTests
             return result;
         }
 
+        public static List<Asp330TestLcdVisualInspection> Asp330TestLcdVisualInspectionFaker(List<Guid> ids)
+        {
+            var result = new List<Asp330TestLcdVisualInspection>();
+            foreach (var id in ids)
+            {
+                var entityFaker = new Faker<Asp330TestLcdVisualInspection>()
+                    .RuleFor(p => p.Asp330TestId, f => id)
+                    .RuleFor(p => p.ResultCheckBox, f => f.Random.Bool())
+                    .RuleFor(p => p.LcdArtifactFree, f => f.Random.Bool())
+                    .RuleFor(p => p.LcdBacklightEven, f => f.Random.Bool())
+                    .RuleFor(p => p.LcdBlemishFree, f => f.Random.Bool())
+                    .RuleFor(p => p.LcdContrastGood, f => f.Random.Bool());
+                result.Add(entityFaker.Generate());
+            }
+
+            return result;
+        }
+
+        public static List<Asp330TestLedCheck> Asp330TestLedCheckFaker(List<Guid> ids)
+        {
+            var result = new List<Asp330TestLedCheck>();
+            foreach (var id in ids)
+            {
+                var entityFaker = new Faker<Asp330TestLedCheck>()
+                    .RuleFor(p => p.Asp330TestId, f => id)
+                    .RuleFor(p => p.ResultCheckBox, f => f.Random.Bool())
+                    .RuleFor(p => p.LedCheckPassedYellow, f => f.Random.Bool())
+                    .RuleFor(p => p.LedCheckPassedRed, f => f.Random.Bool())
+                    .RuleFor(p => p.LedCheckPassedMuteButton, f => f.Random.Bool())
+                    .RuleFor(p => p.LedCheckPassedIr, f => f.Random.Bool())
+                    .RuleFor(p => p.LedCheckPassedGreen, f => f.Random.Bool())
+                    .RuleFor(p => p.LedCheckPassedSelectButton, f => f.Random.Bool());
+                result.Add(entityFaker.Generate());
+            }
+
+            return result;
+        }
+
+        public static List<Asp330TestLiIonBatteryCheck> Asp330TestLiIonBatteryCheckFaker(List<Guid> ids)
+        {
+            var result = new List<Asp330TestLiIonBatteryCheck>();
+            foreach (var id in ids)
+            {
+                var entityFaker = new Faker<Asp330TestLiIonBatteryCheck>()
+                    .RuleFor(p => p.Asp330TestId, f => id)
+                    .RuleFor(p => p.ResultCheckBox, f => f.Random.Bool())
+                    .RuleFor(p => p.ThresholdSecondsAboveCharge, f => f.Random.Int(1, 100))
+                    .RuleFor(p => p.ThresholdSecondsAboveDischarge, f => f.Random.Int(1, 100))
+                    .RuleFor(p => p.BatteryDischargeTestPassed, f => f.Random.Bool())
+                    .RuleFor(p => p.BatteryChargeTestPassed, f => f.Random.Bool())
+                    .RuleFor(p => p.BatteryAlarmsCheckPassed, f => f.Random.Bool());
+                result.Add(entityFaker.Generate());
+            }
+
+            return result;
+        }
+
         public static List<Asp330TestTotalPowerFailureAlarm> Asp330TestTotalPowerFailureAlarmFaker(List<Guid> ids)
         {
             var result = new List<Asp330TestTotalPowerFailureAlarm>();

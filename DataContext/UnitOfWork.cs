@@ -29,6 +29,9 @@ namespace ZOLL.RCS.Database.DataContext
             Asp330TestConditionalPmDueResets = new Asp330TestConditionalPmDueResetRepository(_context);
             Asp330TestDatetimeChecks = new Asp330TestDatetimeCheckRepository(_context);
             Asp330TestLcdContrastSets = new Asp330TestLcdContrastSetRepository(_context);
+            Asp330TestLcdVisualInspections = new Asp330TestLcdVisualInspectionRepository(_context);
+            Asp330TestLedChecks = new Asp330TestLedCheckRepository(_context);
+            Asp330TestLiIonBatteryChecks = new Asp330TestLiIonBatteryCheckRepository(_context);
             Asp330TestTotalPowerFailureAlarms = new Asp330TestTotalPowerFailureAlarmRepository(_context);
         }
 
@@ -46,7 +49,11 @@ namespace ZOLL.RCS.Database.DataContext
         public IAsp330TestConditionalPmDueResetRepository Asp330TestConditionalPmDueResets { get; }
         public IAsp330TestDatetimeCheckRepository Asp330TestDatetimeChecks { get; }
         public IAsp330TestLcdContrastSetRepository Asp330TestLcdContrastSets { get; }
+        public IAsp330TestLcdVisualInspectionRepository Asp330TestLcdVisualInspections { get; }
+        public IAsp330TestLedCheckRepository Asp330TestLedChecks { get; }
+        public IAsp330TestLiIonBatteryCheckRepository Asp330TestLiIonBatteryChecks { get; }
         public IAsp330TestTotalPowerFailureAlarmRepository Asp330TestTotalPowerFailureAlarms { get; }
+
         public int SaveChanges()
         {
             return  _context.SaveChanges();

@@ -5,6 +5,10 @@
 
 namespace ZOLL.RCS.Database.DataContext.Entities
 {
+    /// <summary>
+    /// This class represents a record in the ASP_330_TEST_BUZZER_CHECK table
+    /// This class may be accessed through its own Repository or as an element of the <see cref="Asp330Test"/> class
+    /// </summary>
     public class Asp330TestBuzzerCheck : IEquatable<Asp330TestBuzzerCheck>
     {
         public Guid Asp330TestId { get; set; }

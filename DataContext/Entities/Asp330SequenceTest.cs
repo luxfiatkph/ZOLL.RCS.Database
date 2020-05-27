@@ -5,6 +5,9 @@
 
 namespace ZOLL.RCS.Database.DataContext.Entities
 {
+    /// <summary>
+    /// This class represents a record in the ASP_330_SEQUENCE_TESTS table
+    /// </summary>
     public class Asp330SequenceTest : IEquatable<Asp330SequenceTest>
     {
         public short SequenceId { get; set; }

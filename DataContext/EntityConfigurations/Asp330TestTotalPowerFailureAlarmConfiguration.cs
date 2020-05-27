@@ -3,6 +3,10 @@ using ZOLL.RCS.Database.DataContext.Entities;
 
 namespace ZOLL.RCS.Database.DataContext.EntityConfigurations
 {
+    /// <summary>
+    /// This is the fluent configuration file for the <see cref="Asp330TestTotalPowerFailureAlarm"/> entity class
+    /// Configuration files are used by Entity Framework to build queries
+    /// </summary>
     public class Asp330TestTotalPowerFailureAlarmConfiguration : EntityTypeConfiguration<Asp330TestTotalPowerFailureAlarm>
     {
         public Asp330TestTotalPowerFailureAlarmConfiguration()

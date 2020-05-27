@@ -3,6 +3,10 @@ using ZOLL.RCS.Database.DataContext.Entities;
 
 namespace ZOLL.RCS.Database.DataContext.EntityConfigurations
 {
+    /// <summary>
+    /// This is the fluent configuration file for the <see cref="Asp330TestConditionalPmDueReset"/> entity class
+    /// Configuration files are used by Entity Framework to build queries
+    /// </summary>
     public class Asp330TestConditionalPmDueResetConfiguration : EntityTypeConfiguration<Asp330TestConditionalPmDueReset>
     {
         public Asp330TestConditionalPmDueResetConfiguration()

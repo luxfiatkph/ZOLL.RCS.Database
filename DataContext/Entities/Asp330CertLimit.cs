@@ -5,6 +5,9 @@
 
 namespace ZOLL.RCS.Database.DataContext.Entities
 {
+    /// <summary>
+    /// This class represents a record in the ASP_330_CERT_LIMIT_DAYS table
+    /// </summary>
     public class Asp330CertLimit : IEquatable<Asp330CertLimit>
     {
         public string UnitUnderTest { get; set; }

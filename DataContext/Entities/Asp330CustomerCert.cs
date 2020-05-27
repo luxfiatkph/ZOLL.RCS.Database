@@ -5,6 +5,9 @@
 
 namespace ZOLL.RCS.Database.DataContext.Entities
 {
+    /// <summary>
+    /// This class represents a record in the ASP_330_CUSTOMER_CERT table
+    /// </summary>
     public class Asp330CustomerCert : IEquatable<Asp330CustomerCert>
     {
         public Guid Asp330CustomerCertId { get; set; }

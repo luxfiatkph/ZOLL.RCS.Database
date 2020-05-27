@@ -12,7 +12,7 @@ namespace ZOLL.RCS.Database.DataIntegrationTests
     public class Asp330TestIntegrationTests
     {
         protected const int ListCount = 4;
-        protected const int EntityCount = 9;
+        protected const int EntityCount = 12;
 
         protected IUnitOfWork UnitOfWork { get; }
         protected List<Asp330Test> Entities { get; }
@@ -23,6 +23,9 @@ namespace ZOLL.RCS.Database.DataIntegrationTests
         protected List<Asp330TestConditionalPmDueReset> Asp330TestConditionalPmDueResets { get; }
         protected List<Asp330TestDatetimeCheck> Asp330TestDatetimeChecks { get; }
         protected List<Asp330TestLcdContrastSet> Asp330TestLcdContrastSets { get; }
+        protected List<Asp330TestLcdVisualInspection> Asp330TestLcdVisualInspections { get; }
+        protected List<Asp330TestLedCheck> Asp330TestLedChecks { get; }
+        protected List<Asp330TestLiIonBatteryCheck> Asp330TestLiIonBatteryChecks { get; }
         protected List<Asp330TestTotalPowerFailureAlarm> Asp330TestTotalPowerFailureAlarms { get; }
 
         protected IAsp330TestRepository Repository { get; }
@@ -42,6 +45,9 @@ namespace ZOLL.RCS.Database.DataIntegrationTests
             Asp330TestConditionalPmDueResets = FakerAsp330.Asp330TestConditionalPmDueResetFaker(ids);
             Asp330TestDatetimeChecks = FakerAsp330.Asp330TestDatetimeCheckFaker(ids);
             Asp330TestLcdContrastSets = FakerAsp330.Asp330TestLcdContrastSetFaker(ids);
+            Asp330TestLcdVisualInspections = FakerAsp330.Asp330TestLcdVisualInspectionFaker(ids);
+            Asp330TestLedChecks = FakerAsp330.Asp330TestLedCheckFaker(ids);
+            Asp330TestLiIonBatteryChecks = FakerAsp330.Asp330TestLiIonBatteryCheckFaker(ids);
             Asp330TestTotalPowerFailureAlarms = FakerAsp330.Asp330TestTotalPowerFailureAlarmFaker(ids);
 
             for (var i = 0; i < ListCount; i++)
@@ -50,19 +56,25 @@ namespace ZOLL.RCS.Database.DataIntegrationTests
                 Entities[i].Asp330TestAspSelfCheck = Asp330TestAspSelfChecks[i];
                 Asp330TestButtonChecks[i].Asp330Test = Entities[i];
                 Entities[i].Asp330TestButtonCheck = Asp330TestButtonChecks[i];
-
                 Asp330TestBuzzerChecks[i].Asp330Test = Entities[i];
                 Entities[i].Asp330TestBuzzerCheck = Asp330TestBuzzerChecks[i];
+
                 Asp330TestCommRamBootloads[i].Asp330Test = Entities[i];
                 Entities[i].Asp330TestCommRamBootload = Asp330TestCommRamBootloads[i];
-
                 Asp330TestConditionalPmDueResets[i].Asp330Test = Entities[i];
                 Entities[i].Asp330TestConditionalPmDueReset = Asp330TestConditionalPmDueResets[i];
                 Asp330TestDatetimeChecks[i].Asp330Test = Entities[i];
                 Entities[i].Asp330TestDatetimeCheck = Asp330TestDatetimeChecks[i];
-
+                
                 Asp330TestLcdContrastSets[i].Asp330Test = Entities[i];
                 Entities[i].Asp330TestLcdContrastSet = Asp330TestLcdContrastSets[i];
+                Asp330TestLcdVisualInspections[i].Asp330Test = Entities[i];
+                Entities[i].Asp330TestLcdVisualInspection = Asp330TestLcdVisualInspections[i];
+                Asp330TestLedChecks[i].Asp330Test = Entities[i];
+                Entities[i].Asp330TestLedCheck = Asp330TestLedChecks[i];
+
+                Asp330TestLiIonBatteryChecks[i].Asp330Test = Entities[i];
+                Entities[i].Asp330TestLiIonBatteryCheck = Asp330TestLiIonBatteryChecks[i];
                 Asp330TestTotalPowerFailureAlarms[i].Asp330Test = Entities[i];
                 Entities[i].Asp330TestTotalPowerFailureAlarm = Asp330TestTotalPowerFailureAlarms[i];
             }
@@ -166,23 +178,30 @@ namespace ZOLL.RCS.Database.DataIntegrationTests
             var item2 = Repository.Get(itemId2);
             item1.ResultCheckBox = UnitTestHelper.Tweak(item1.ResultCheckBox);
             item2.ResultCheckBox = UnitTestHelper.Tweak(item2.ResultCheckBox);
+
             item1.Asp330TestAspSelfCheck.PassedCommSelfCheck = UnitTestHelper.Tweak(item1.Asp330TestAspSelfCheck.PassedCommSelfCheck);
             item2.Asp330TestAspSelfCheck.PassedCommSelfCheck = UnitTestHelper.Tweak(item2.Asp330TestAspSelfCheck.PassedCommSelfCheck);
             item1.Asp330TestButtonCheck.CheckPassedCassButton = UnitTestHelper.Tweak(item1.Asp330TestButtonCheck.CheckPassedCassButton);
             item2.Asp330TestButtonCheck.CheckPassedCassButton = UnitTestHelper.Tweak(item2.Asp330TestButtonCheck.CheckPassedCassButton);
-
             item1.Asp330TestBuzzerCheck.ResultCheckBox = UnitTestHelper.Tweak(item1.Asp330TestBuzzerCheck.ResultCheckBox);
             item2.Asp330TestBuzzerCheck.ResultCheckBox = UnitTestHelper.Tweak(item2.Asp330TestBuzzerCheck.ResultCheckBox);
+
             item1.Asp330TestCommRamBootload.ResultCheckBox = UnitTestHelper.Tweak(item1.Asp330TestCommRamBootload.ResultCheckBox);
             item2.Asp330TestCommRamBootload.ResultCheckBox = UnitTestHelper.Tweak(item2.Asp330TestCommRamBootload.ResultCheckBox);
-
             item1.Asp330TestConditionalPmDueReset.ResultCheckBox = UnitTestHelper.Tweak(item1.Asp330TestConditionalPmDueReset.ResultCheckBox);
             item2.Asp330TestConditionalPmDueReset.ResultCheckBox = UnitTestHelper.Tweak(item2.Asp330TestConditionalPmDueReset.ResultCheckBox);
             item1.Asp330TestDatetimeCheck.ResultCheckBox = UnitTestHelper.Tweak(item1.Asp330TestDatetimeCheck.ResultCheckBox);
             item2.Asp330TestDatetimeCheck.ResultCheckBox = UnitTestHelper.Tweak(item2.Asp330TestDatetimeCheck.ResultCheckBox);
-
+            
             item1.Asp330TestLcdContrastSet.ResultCheckBox = UnitTestHelper.Tweak(item1.Asp330TestLcdContrastSet.ResultCheckBox);
             item2.Asp330TestLcdContrastSet.ResultCheckBox = UnitTestHelper.Tweak(item2.Asp330TestLcdContrastSet.ResultCheckBox);
+            item1.Asp330TestLcdVisualInspection.ResultCheckBox = UnitTestHelper.Tweak(item1.Asp330TestLcdVisualInspection.ResultCheckBox);
+            item2.Asp330TestLcdVisualInspection.ResultCheckBox = UnitTestHelper.Tweak(item2.Asp330TestLcdVisualInspection.ResultCheckBox);
+            item1.Asp330TestLedCheck.ResultCheckBox = UnitTestHelper.Tweak(item1.Asp330TestLedCheck.ResultCheckBox);
+            item2.Asp330TestLedCheck.ResultCheckBox = UnitTestHelper.Tweak(item2.Asp330TestLedCheck.ResultCheckBox);
+
+            item1.Asp330TestLiIonBatteryCheck.ResultCheckBox = UnitTestHelper.Tweak(item1.Asp330TestLiIonBatteryCheck.ResultCheckBox);
+            item2.Asp330TestLiIonBatteryCheck.ResultCheckBox = UnitTestHelper.Tweak(item2.Asp330TestLiIonBatteryCheck.ResultCheckBox);
             item1.Asp330TestTotalPowerFailureAlarm.ResultCheckBox = UnitTestHelper.Tweak(item1.Asp330TestTotalPowerFailureAlarm.ResultCheckBox);
             item2.Asp330TestTotalPowerFailureAlarm.ResultCheckBox = UnitTestHelper.Tweak(item2.Asp330TestTotalPowerFailureAlarm.ResultCheckBox);
 

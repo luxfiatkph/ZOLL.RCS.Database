@@ -31,6 +31,9 @@ namespace ZOLL.RCS.Database.DataContext
         public virtual DbSet<Asp330TestConditionalPmDueReset> Asp330TestConditionalPmDueResets { get; set; }
         public virtual DbSet<Asp330TestDatetimeCheck> Asp330TestDatetimeChecks { get; set; }
         public virtual DbSet<Asp330TestLcdContrastSet> Asp330TestLcdContrastSets { get; set; }
+        public virtual DbSet<Asp330TestLcdVisualInspection> Asp330TestLcdVisualInspections { get; set; }
+        public virtual DbSet<Asp330TestLedCheck> Asp330TestLedChecks { get; set; }
+        public virtual DbSet<Asp330TestLiIonBatteryCheck> Asp330TestLiIonBatteryChecks { get; set; }
         public virtual DbSet<Asp330TestTotalPowerFailureAlarm> Asp330TestTotalPowerFailureAlarms { get; set; }
 
         #endregion
@@ -51,6 +54,9 @@ namespace ZOLL.RCS.Database.DataContext
             modelBuilder.Configurations.Add(new Asp330TestConditionalPmDueResetConfiguration());
             modelBuilder.Configurations.Add(new Asp330TestDatetimeCheckConfiguration());
             modelBuilder.Configurations.Add(new Asp330TestLcdContrastSetConfiguration());
+            modelBuilder.Configurations.Add(new Asp330TestLcdVisualInspectionConfiguration());
+            modelBuilder.Configurations.Add(new Asp330TestLedCheckConfiguration());
+            modelBuilder.Configurations.Add(new Asp330TestLiIonBatteryCheckConfiguration());
             modelBuilder.Configurations.Add(new Asp330TestTotalPowerFailureAlarmConfiguration());
         }
     }

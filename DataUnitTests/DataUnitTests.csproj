@@ -77,6 +77,10 @@
     <Compile Include="Asp330TestCommRamBootloadTests.cs" />
     <Compile Include="Asp330TestConditionalPmDueResetTests.cs" />
     <Compile Include="Asp330TestDatetimeCheckTests.cs" />
+    <Compile Include="Asp330TestLcdContrastSetTests.cs" />
+    <Compile Include="Asp330TestLcdVisualInspectionTests.cs" />
+    <Compile Include="Asp330TestLedCheckTests.cs" />
+    <Compile Include="Asp330TestLiIonBatteryCheckTests.cs" />
     <Compile Include="Asp330TestTests.cs" />
     <Compile Include="Asp330TestTotalPowerFailureAlarmTests.cs" />
     <Compile Include="DataUnitTestBase.cs" />

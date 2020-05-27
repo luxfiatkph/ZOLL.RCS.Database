@@ -3,6 +3,10 @@ using ZOLL.RCS.Database.DataContext.Entities;
 
 namespace ZOLL.RCS.Database.DataContext.EntityConfigurations
 {
+    /// <summary>
+    /// This is the fluent configuration file for the <see cref="Asp330TestCommRamBootload"/> entity class
+    /// Configuration files are used by Entity Framework to build queries
+    /// </summary>
     public class Asp330TestCommRamBootloadConfiguration : EntityTypeConfiguration<Asp330TestCommRamBootload>
     {
         public Asp330TestCommRamBootloadConfiguration()
